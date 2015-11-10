@@ -6,18 +6,18 @@ require 'rock_paper_scissors/version'
 Gem::Specification.new do |spec|
   spec.name          = "rock_paper_scissors"
   spec.version       = RockPaperScissors::VERSION
-  spec.authors       = ["Sia"]
+  spec.authors       = ["Sia Karamalegos"]
   spec.email         = ["siakaramalegos@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Settle any argument with a Rock Paper Scissors battle.}
+  spec.description   = %q{To install, run gem install rock_paper_scissors.}
+  spec.homepage      = "https://github.com/siakaramalegos/rock_paper_scissors"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = "https://rubygems.org"
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
