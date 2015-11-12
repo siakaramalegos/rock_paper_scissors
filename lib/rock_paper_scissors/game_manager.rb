@@ -10,8 +10,8 @@ module RockPaperScissors
       mode = select_mode
       @board = Board.new(mode)
 
-      players = select_player_mode
-      initialize_players(players)
+      num_players = select_player_mode
+      initialize_players(num_players)
 
       puts "\n(Remember to begin play by entering game.play)"
     end
@@ -36,8 +36,7 @@ module RockPaperScissors
         print " > "
         mode = gets.chomp.to_i
         if valid_mode?(mode)
-          mode
-          break
+          return mode
         end
       end
     end
@@ -47,18 +46,17 @@ module RockPaperScissors
       loop do
         puts "\nType 1 for 1 player or 2 for 2 players"
         print " > "
-        players = gets.chomp.to_i
-        if valid_mode?(players)
-          players
-          break
+        num_players = gets.chomp.to_i
+        if valid_mode?(num_players)
+          return num_players
         end
       end
     end
 
     # Instantiate players based on player mode
-    def initialize_players(mode)
+    def initialize_players(num_players)
       @player1 = Human.new(@board, 1)
-      if mode == 1
+      if num_players == 1
         @player2 = Computer.new(@board, 2)
       else
         @player2 = Human.new(@board, 2)
@@ -82,7 +80,7 @@ module RockPaperScissors
     def print_results(player_name, moves, color)
       phrase = @board.phrase(moves)
       results = "#{player_name} WINS!!! #{phrase}"
-      color == 'green' ? Rainbow(results).green : Rainbow(results).red
+      color == 'green' ? puts(Rainbow(results).green) : puts(Rainbow(results).red)
     end
 
     def quit?
