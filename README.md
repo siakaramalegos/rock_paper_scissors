@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-1. To play the game, jump into IRB or Pry and first require the gem:
+1. To play the game, first require it in your Ruby script or jump into IRB or Pry require it there:
 `require 'rock_paper_scissors'`
 
 2. Then, set a variable equal to a new instance of Game:
