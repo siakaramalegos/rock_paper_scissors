@@ -1,6 +1,6 @@
 module RockPaperScissors
 
-  class RockPaperScissor
+  class Game
     @@move_lookup = {'r' => 'rock', 'p' => 'paper', 's' => 'scissors'}
 
     def initialize mode="AI"
