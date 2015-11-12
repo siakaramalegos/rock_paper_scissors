@@ -5,9 +5,10 @@ module RockPaperScissors
     @@move_lookup = {'r' => 'rock', 'p' => 'paper', 's' => 'scissors'}
 
     def initialize mode="AI"
-      puts Rainbow("\n*********************************************").bg(:yellow).black
-      puts "**    Welcome to Rock, Paper, Scissors!    **".bg(:yellow).black
-      puts "*********************************************".bg(:yellow).black
+      puts "\n"
+      puts Rainbow("*********************************************").bg(:yellow).black
+      puts Rainbow("**    Welcome to Rock, Paper, Scissors!    **").bg(:yellow).black
+      puts Rainbow("*********************************************").bg(:yellow).black
       mode = select_mode
       initialize_players(mode)
 
@@ -32,7 +33,7 @@ module RockPaperScissors
       if @player1.move == @player2.move
         puts Rainbow("It's a draw!  Let's try again!").red
       elsif player1_win?
-        puts Rainbow("#{@player1.name} WINS with #{@@move_lookup[@player1.move].upcase} beating #{@player2.name}'s #{@@move_lookup[@player2.move].upcase}!").red
+        puts Rainbow("#{@player1.name} WINS with #{@@move_lookup[@player1.move].upcase} beating #{@player2.name}'s #{@@move_lookup[@player2.move].upcase}!").green
         true
       else
         puts Rainbow("#{@player2.name} WINS with #{@@move_lookup[@player2.move].upcase} beating #{@player1.name}'s #{@@move_lookup[@player1.move].upcase}.").red
