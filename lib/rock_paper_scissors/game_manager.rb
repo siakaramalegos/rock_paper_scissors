@@ -18,23 +18,24 @@ module RockPaperScissors
         @player1.select_move
         @player2.select_move
 
-        get_result
-
-        break if quit?
+        break if winner
       end
+
+      play unless quit?
     end
 
     private
 
-    def get_result
+    def winner
       puts "\n\n"
       if @player1.move == @player2.move
         puts "It's a draw!  Let's try again!"
-        play
       elsif player1_win?
         puts "#{@player1.name} WINS with #{@@move_lookup[@player1.move].upcase} beating #{@player2.name}'s #{@@move_lookup[@player2.move].upcase}!"
+        true
       else
         puts "#{@player2.name} WINS with #{@@move_lookup[@player2.move].upcase} beating #{@player1.name}'s #{@@move_lookup[@player1.move].upcase}."
+        true
       end
     end
 
