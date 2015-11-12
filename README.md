@@ -2,8 +2,6 @@
 
 Settle any argument with an epic Rock Paper Scissors battle. This gem allows you to run a 1 or 2 player rock paper scissors game from your command line.
 
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
