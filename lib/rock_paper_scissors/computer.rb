@@ -2,7 +2,8 @@ module RockPaperScissors
 
   class Computer < Player
 
-    def initialize
+    def initialize(board)
+      super(board)
       @name = "Skynet"
     end
 
