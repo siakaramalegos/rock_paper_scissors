@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["siakaramalegos@gmail.com"]
 
   spec.summary       = %q{Settle any argument with a Rock Paper Scissors battle.}
-  spec.description   = %q{To install, run gem install rock_paper_scissors.}
+  spec.description   = %q{Settle any argument with a Rock Paper Scissors battle.  To install, run gem install rock_paper_scissors.}
   spec.homepage      = "https://github.com/siakaramalegos/rock_paper_scissors"
   spec.license       = "MIT"
 
