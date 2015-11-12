@@ -8,7 +8,7 @@ Settle any argument with an epic Rock Paper Scissors battle. This gem allows you
 " target="_blank"><img src="http://img.youtube.com/vi/cSLeBKT7-sM/0.jpg"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
-Rock-Paper-Scissors-Lizard-Spock Rules
+### Rock-Paper-Scissors-Lizard-Spock Rules
 * Rock crushes Lizard and crushes Scissors
 * Paper disproves Spock and covers Rock
 * Scissors decapitates Lizard and cuts Paper
