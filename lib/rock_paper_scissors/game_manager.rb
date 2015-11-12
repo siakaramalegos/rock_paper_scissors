@@ -1,12 +1,14 @@
+require 'rainbow'
 module RockPaperScissors
 
   class Game
     @@move_lookup = {'r' => 'rock', 'p' => 'paper', 's' => 'scissors'}
 
     def initialize mode="AI"
-      puts "\n*********************************************"
-      puts "**    Welcome to Rock, Paper, Scissors!    **"
-      puts "*********************************************"
+      puts "\n"
+      puts Rainbow("*********************************************").bg(:yellow).black
+      puts Rainbow("**    Welcome to Rock, Paper, Scissors!    **").bg(:yellow).black
+      puts Rainbow("*********************************************").bg(:yellow).black
       mode = select_mode
       initialize_players(mode)
 
@@ -29,12 +31,12 @@ module RockPaperScissors
     def winner
       puts "\n\n"
       if @player1.move == @player2.move
-        puts "It's a draw!  Let's try again!"
+        puts Rainbow("It's a draw!  Let's try again!").red
       elsif player1_win?
-        puts "#{@player1.name} WINS with #{@@move_lookup[@player1.move].upcase} beating #{@player2.name}'s #{@@move_lookup[@player2.move].upcase}!"
+        puts Rainbow("#{@player1.name} WINS with #{@@move_lookup[@player1.move].upcase} beating #{@player2.name}'s #{@@move_lookup[@player2.move].upcase}!").green
         true
       else
-        puts "#{@player2.name} WINS with #{@@move_lookup[@player2.move].upcase} beating #{@player1.name}'s #{@@move_lookup[@player1.move].upcase}."
+        puts Rainbow("#{@player2.name} WINS with #{@@move_lookup[@player2.move].upcase} beating #{@player1.name}'s #{@@move_lookup[@player1.move].upcase}.").red
         true
       end
     end
@@ -64,7 +66,7 @@ module RockPaperScissors
     end
 
     def quit?
-      puts "\nWould you like to play again? (y/n)"
+      puts Rainbow("\nWould you like to play again? (y/n)").yellow
       gets.chomp.downcase != 'y'
     end
 
